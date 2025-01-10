@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOCIAL MEDIA ANALYST</title>
+    <link rel="icon" href="./logo.jpeg" type="image/jpeg" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Main Chat Interface -->
+    <div class="main-container">
+      <div class="chat-interface">
+        <div class="chat-header">
+          <h2>Social Media Analyst</h2>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+          <!-- Messages will be added here -->
+        </div>
+
+        <div class="loading" id="loading">
+          <div class="loading-spinner"></div>
+        </div>
+
+        <div class="input-container">
+          <div class="input-group">
+            <input
+              type="text"
+              id="userInput"
+              placeholder="Type your message..."
+            />
+            <button class="send-btn" onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- History Sidebar -->
+    <div class="history-sidebar">
+      <div class="history-header">Recent Chats</div>
+      <div class="history-list" id="historyList">
+        <!-- History items will be added here -->
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
